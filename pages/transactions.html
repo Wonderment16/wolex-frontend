@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transactions | Wolex</title>
+
+<link rel="stylesheet" href="../css/transactions.css">
+
+</head>
+    <body class="transactions">
+        <div class="transactions-page">
+            <h2 class="title">Transactions</h2>
+
+            <div id="sidebar-container"></div>
+            <div class="overlay"></div>
+
+            <div class="main-content">
+                <button type="button" class="mobile-menu-btn">☰</button>
+
+    <div class="summary">
+
+        <div class="summary-item">
+            <p class="label">Transactions</p>
+            <h3 id="total-count">0</h3>
+            <p class="more" id="income-expense-text">0 Expenses ● 0 Income</p>
+        </div>
+
+        <div class="summary-item">
+            <p class="label" placeholder="None-set yet">Budget</p>
+            <h3 id="budget-value">0</h3>
+            <p class="more" id="used-value">Used: 0</p>
+            <p class="more" id="left-value">Left: 0</p>
+        </div>
+
+        <div class="summary-item">
+            <p class="label">Remaining</p>
+            <h3 id="remaining-value">0</h3>
+            <p class="more">Insight</p>
+
+        </div>
+
+        </div>
+
+    <!-- Search -->
+    <div class="search-row">
+        <input type="text" placeholder="Search transactions..." class="search-input" autocomplete="off">
+        <button type="button" class="filter-btn">⚙️</button>
+    </div>
+
+    <div class="filters hidden">
+
+    <div class="filter-group">
+        <label>Type</label>
+        <select title="type">
+        <option>All</option>
+        <option>Income</option>
+        <option>Expense</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Category</label>
+        <select title="category">
+        <option>All</option>
+        <option>Food</option>
+        <option>Salary</option>
+        <option>Transport</option>
+        <option>Gift</option>
+        <option>Shopping</option>
+        <option>Subscriptions</option>
+        <option>Bills &amp; Utilities</option>
+        <option>Academics</option>
+        <option>Miscellaneous</option>
+        </select>
+    </div>
+
+    </div>
+<!---
+    <div class="filters category">
+        <p>Category</p>
+        <p>Date Range</p>
+        <p>Type</p>
+    </div>
+--->
+
+    <div class="transactions-preview">
+
+        <h3>Recent Transactions</h3>
+
+        <div class="table-header">
+            <span>Product</span>
+            <span>Category</span>
+            <span>Amount</span>
+        </div>
+
+        <div class="table-body"></div>
+
+        <a href="transaction_list.html" class="see-all">See all &rarr;</a>
+
+        </div>
+
+    </div>
+
+    <!-- FAB -->
+    <button type="button" class="fab">+</button>
+
+    <div class="modal hidden" id="txn-modal">
+
+        <div class="modal-content">
+
+        <h3>Add Transaction</h3>
+
+        <input type="text" id="txn-desc" placeholder="Description">
+
+        <input type="number" id="txn-amount" placeholder="Amount">
+
+        <select title="type" id="txn-type">
+            <option value="EXPENSE">Expense</option>
+            <option value="INCOME">Income</option>
+        </select>
+
+        <select title="category" id="txn-category">
+            <option value="1">FOOD</option>
+            <option value="2">TRANSPORTATION</option>
+            <option value="3">ACADEMIC</option>
+            <option value="4">BILLS AND UTILITIES</option>
+            <option value="5">HEALTH AND FITNESS</option>
+            <option value="6">MISCELLANEOUS</option>
+            <option value="7">SALARY</option>
+            <option value="8">GIFT</option>
+            <option value="9">SHOPPING</option>
+        </select>
+
+        <div class="modal-actions">
+            <button type="button" id="save-txn">Save</button>
+            <button type="button" id="close-modal">Cancel</button>
+        </div>
+
+        </div>
+
+    </div>
+        </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script type="module" src="../scripts/transactions.js"></script>
+    </body>
+</html>

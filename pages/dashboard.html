@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | Wolex</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+  <body class="dashboard">
+
+  <div id="sidebar-container"></div>
+  <div class="overlay"></div>
+
+    <div class="main-content">
+    <div class="dashboard-container">
+
+  <button type="button" class="mobile-menu-btn">☰</button>
+
+    <!-- Welcome Header -->
+    <h1 class="dashboard-title">
+    <span id="user-name"></span>!
+    </h1>
+
+    <div class="balance-card">
+
+      <p class="balance-label">Current Balance</p>
+
+      <h2 id="balance-value">₦0</h2>
+
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="dashboard-grid">
+
+    <div class="card stat-card">
+    <h3>Total Income</h3>
+    <p id="total_income">₦0</p>
+    </div>
+
+    <div class="card stat-card">
+    <h3>Total Expenses</h3>
+    <p id="total_expense">₦0</p>
+    </div>
+
+    <div class="card stat-card">
+    <h3>Top Spending</h3>
+    <p id="top_category">-</p>
+    </div>
+
+    <div class="card stat-card">
+    <h3>Top Income Source</h3>
+    <p id="top_income_source">-</p>
+    </div>
+
+    </div>
+
+
+
+    <!-- Chart Section -->
+    <div class="card chart-card">
+
+      <div class="chart-header">
+
+        <h3>Spending Trend</h3>
+
+        <div class="chart-controls">
+
+        <button type="button" id="weekly-btn" class="btn btn-light chart-btn">Weekly</button>
+
+        <button type="button" id="monthly-btn" class="btn btn-light chart-btn">Monthly</button>
+
+        <button type="button" id="yearly-btn" class="btn btn-light chart-btn">Yearly</button>
+
+        </div>
+
+        </div>
+
+      <div class="chart-container">
+        <div class="chart-empty empty-state" id="chart-empty" hidden>
+          <p>No data yet</p>
+          <span>Add transactions to see your spending trend</span>
+        </div>
+        <canvas id="trendChart"></canvas>
+      </div>
+
+      </div>
+
+      <div id="insights-box"></div>
+
+
+
+    <!-- Recent Transactions -->
+    <div class="section-soft transactions-section">
+
+    <h2>Recent Transactions</h2>
+
+    <div class="transactions-body">
+      <div class="table-header">
+        <span>Product</span>
+        <span>Category</span>
+        <span>Amount</span>
+      </div>
+
+      <div class="table-body"></div>
+    </div>
+
+    <div class="transactions-footer">
+
+    <a class="btn btn-primary" href="transaction_list.html">
+    See all
+    </a>
+
+    </div>
+
+    </div>
+
+
+    </div>
+    <button type="button" class="fab">+</button>
+
+    <div class="modal hidden" id="txn-modal">
+
+      <div class="modal-content">
+
+        <h3>Add Transaction</h3>
+
+        <input type="text" id="txn-desc" placeholder="Description">
+
+        <input type="number" id="txn-amount" placeholder="Amount">
+
+        <select title="type" id="txn-type">
+          <option value="EXPENSE">Expense</option>
+          <option value="INCOME">Income</option>
+        </select>
+
+        <select title="category" id="txn-category">
+          <option>FOOD</option>
+          <option>TRANSPORTATION</option>
+          <option>ACADEMIC</option>
+          <option>BILLS AND UTILITIES</option>
+          <option>HEALTH AND FITNESS</option>
+          <option>MISCELLANEOUS</option>
+          <option>SALARY</option>
+          <option>GIFT</option>
+          <option>SHOPPING</option>
+        </select>
+
+        <div class="modal-actions">
+          <button type="button" id="save-txn">Save</button>
+          <button type="button" id="close-modal">Cancel</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    </div>
+
+
+  <script src="../scripts/sidebar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="../scripts/dashboard.js"></script>
+
+  </body>
+
+</html>

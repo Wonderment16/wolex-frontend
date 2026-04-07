@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>All Transactions | Wolex</title>
+
+<link rel="stylesheet" href="../css/transactions.css">
+
+</head>
+    <body class="transactions-page">
+        <h2 class="title">Transactions</h2>
+
+        <div id="sidebar-container"></div>
+        <div class="overlay"></div>
+
+            <div class="main-content">
+    <!-- Search -->
+    <div class="search-row">
+        <input type="text" placeholder="Search transactions..." class="search-input">
+        <button type="button" class="filter-btn">⚙️</button>
+    </div>
+
+    <div class="filters hidden">
+
+    <div class="filter-group">
+        <label>Type</label>
+        <select title="type">
+        <option>All</option>
+        <option>Income</option>
+        <option>Expense</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Category</label>
+        <select title="category">
+        <option>All</option>
+        <option>Food</option>
+        <option>Salary</option>
+        <option>Transport</option>
+        <option>Gift</option>
+        <option>Shopping</option>
+        <option>Bills &amp; Utilities</option>
+        <option>Education</option>
+        <option>Miscallaneous</option>
+        </select>
+    </div>
+
+    </div>
+<!---
+    <div class="filters category">
+        <p>Category</p>
+        <p>Date Range</p>
+        <p>Type</p>
+    </div>
+--->
+
+        <div class="table-header">
+            <span>Product</span>
+            <span>Category</span>
+            <span>Amount</span>
+        </div>
+
+        <div class="table-body">
+
+        </div>
+
+    <!-- FAB -->
+    <button type="button" class="fab">+</button>
+
+            </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script type="module" src="../scripts/transaction_list.js"></script>
+    </body>
+</html>
