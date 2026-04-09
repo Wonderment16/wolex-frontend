@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", async (e) => {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/auth/token/", {
+        const response = await fetch("https://wolex.onrender.com/api/auth/token/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

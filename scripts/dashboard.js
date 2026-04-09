@@ -4,7 +4,7 @@ import {
   normalizeDashboardData,
   getCurrencySymbol
 } from "./shared.js";
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://wolex.onrender.com";
 const USE_MOCK = false;
 
 let allTransactions = [];

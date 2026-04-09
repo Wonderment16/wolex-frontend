@@ -1,5 +1,3 @@
-console.log("Wolex landing page loaded");
-
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {

@@ -22,7 +22,7 @@ signupForm.addEventListener("submit", async function (e) {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:8000/api/auth/register/", {
+        const response = await fetch("https://wolex.onrender.com/api/auth/register/", {
 
             method: "POST",
 

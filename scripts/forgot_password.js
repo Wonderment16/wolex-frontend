@@ -19,7 +19,7 @@ form.addEventListener("submit", async (e) => {
   console.log("Submitting forgot password request for email:", email);
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/api/auth/password-reset/request/", {
+    const response = await fetch("https://wolex-backend.onrender.com/api/auth/password-reset/request/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
