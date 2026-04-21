@@ -42,8 +42,14 @@ signupForm.addEventListener("submit", async function (e) {
         const data = await response.json();
 
         if (!response.ok) {
+            console.log("FULL ERROR:", data);
 
-            errorBox.textContent = data.detail || "Signup failed.";
+            // extract first error message
+            const firstError = Object.values(data)[0];
+            errorBox.textContent = Array.isArray(firstError)
+                ? firstError[0]
+                : "Signup failed.";
+
             return;
         }
 
