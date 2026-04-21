@@ -53,12 +53,23 @@ signupForm.addEventListener("submit", async function (e) {
             return;
         }
 
-        console.log("Signup success:", data);
-        localStorage.setItem("user_name", firstName || email.split("@")[0]); // Store username for greeting
+            // login immediately after signup
+            const loginResponse = await fetch("https://wolex.onrender.com/api/auth/login/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            });
 
-        alert("Account created successfully!");
+            const loginData = await loginResponse.json();
 
-        window.location.href = "login.html";
+            localStorage.setItem("access_token", loginData.access);
+
+            window.location.href = "../dashboard/index.html";
 
     } catch (error) {
 
