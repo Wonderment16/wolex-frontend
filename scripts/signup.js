@@ -69,7 +69,7 @@ signupForm.addEventListener("submit", async function (e) {
 
             localStorage.setItem("access_token", loginData.access);
 
-            window.location.href = "../pages/dashboard";
+            window.location.href = "../pages/dashboard.html";
 
     } catch (error) {
 
